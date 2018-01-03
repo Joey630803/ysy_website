@@ -1,0 +1,93 @@
+@import '~antd/dist/antd.css';
+
+.lis {
+    border:0
+}
+
+.lis .li{
+    border:0;
+    color:#888;
+    padding:0 10px;
+    font-size:14px;
+}
+.lis .li:hover{
+    border:0;
+}
+.lis .li a:hover{
+    color:#118eea;
+}
+
+.logoRow{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:6px;
+}
+
+.logo{
+    display:flex;
+    justify-content: center;
+    width:100px;
+}
+.logo img {
+    width:50px;
+    height:43px;
+}
+.logo span{
+    font-size:24px;
+    padding-left:5px;
+}
+
+.spaceRight{
+    margin-right: 88px
+}
+
+
+.leftContainer{
+    width:400px;
+    float:left;
+}
+.carousel{
+    width:100%;
+    float:left;
+}
+
+
+
+/* .ant-menu-horizontal > .ant-menu-item > a, .ant-menu-horizontal > .ant-menu-submenu > a
+{
+  display: inline-block !important;
+} */
+
+
+/*Footer******Start*****/
+.footerRow{
+    display: flex;
+    align-items: center;
+    background:#f2f2f2;
+    height:200px;
+}
+.footerCenter{
+    display: flex;
+    align-items: center;
+}
+.footerCenter div{
+    text-align: center;
+    flex:1;
+    line-height: 20px;
+}
+.footerCenter div:nth-child(1){
+    text-align:right;
+    flex:1;
+
+}
+.footerCenter div:nth-child(3){
+    text-align:left;
+    flex:1;
+
+}
+.footerCenter img {
+    width:50px;
+    height:43px;
+    margin:20px;
+}
