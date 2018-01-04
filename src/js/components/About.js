@@ -12,20 +12,26 @@ import {
   message
   
 } from 'antd'
-function About(){
+
+class About extends Component{
+
+  render(){
+
+  
   return(
 
     <Row>
       <Col span={6}></Col>
-      <Col span={16} className="footer">
-      <p style={{textAlign:'left'}}>
-          这里是客户案例
-      </p>
+      <Col span={16}>
+        <p style={{textAlign:'left'}}>
+            这里是about
+        </p>
       </Col>
 
       <Col span={2}></Col>
     </Row>
   )
+}
 }
 
 export default About;

@@ -1,7 +1,14 @@
 @import '~antd/dist/antd.css';
-
+.login a{
+    color:#888;
+}
+.login {
+    height:46px;
+    line-height: 46px;
+    margin-left:20px;
+}
 .lis {
-    border:0
+    border:0;
 }
 
 .lis .li{
@@ -10,6 +17,7 @@
     padding:0 10px;
     font-size:14px;
 }
+
 .lis .li:hover{
     border:0;
 }
@@ -39,17 +47,66 @@
 }
 
 .spaceRight{
-    margin-right: 88px
+    margin-right: 80px
 }
 
+/*轮播图开始*/
 
-.leftContainer{
-    width:400px;
-    float:left;
-}
 .carousel{
     width:100%;
-    float:left;
+    height:350px;
+    overflow: hidden;
+    position:relative;
+}
+
+.carousel .dotsClass{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    bottom:10px;
+    display: inline-block;
+}
+.carousel .dotsClass li{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+   
+}
+.carousel .dotsClass li button{
+    background: 0 0;
+    display:block;
+    cursor: pointer;
+    outline:0;
+    border:0;
+    margin:10px;
+    font-size:0;
+    width:15px;
+    height:15px;
+}
+.carousel .dotsClass li button:before{
+    position:absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:15px;
+    font-size:35px;
+    content:'•';
+    
+    color:#000;
+    opacity:.25;
+}
+.carousel .dotsClass li.slick-active button:before{
+    content:url(../images/slick_button.png);
+    opacity:.75;
+}
+
+.gotoNext{
+    position:absolute;
+    display:block;
+    top:0px;
+    right:100px;
+    width:50px;
+    height:50px;
 }
 
 

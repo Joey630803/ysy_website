@@ -30,10 +30,27 @@ module.exports = {
           use:[
               {loader:'style-loader'},
               {
-                  loader:'css-loader'
+                  loader:'css-loader',
+                //   options:{
+                //     root: '.' ,
+                //     modules:true
+                
+                //   }
+                
               }
           ]
-      }
+      },
+      {  
+        test: /\.png$/, 
+        use: [ 
+            {  
+                loader: 'url-loader',  
+                // options: {  
+                //     limit: '1024'  
+                // }  
+            },  
+        ]  
+    }
   ]},
   output: {
     path: __dirname,

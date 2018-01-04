@@ -35,7 +35,6 @@ class Header extends React.Component{
         this.state={
             current:'home',
             modalVisible:false,
-            action:'login',
             hasLogined:false,
             username:''
         }
@@ -63,17 +62,13 @@ class Header extends React.Component{
         localStorage.username = '';
 		this.setState({hasLogined:false});
     }
+    loginClick(){
+        this.setModalVisible(true)
+    }
     handleClick(e){
-
-        if(e.key=='login'){
-            this.setState({current:'login'})
-            this.setModalVisible(true)
-        }else{
             this.setState({current:e.key})
             this.setModalVisible(false)
             localStorage.setItem('current', e.key)
-
-        }
     }
     handleSubmit(e){
         e.preventDefault();
@@ -105,17 +100,19 @@ class Header extends React.Component{
     }
     render(){
         let {getFieldDecorator}=this.props.form;
+
         const userShow=this.state.hasLogined
         ?
-        <Menu.Item  key="logout" className="login li">
+        <span className="login">
             <Button type="primary" htmlType="button">{this.state.username}</Button>
             &nbsp;&nbsp;
-            <span onClick={this.logout.bind(this)}><a><Icon type="user"/>退出</a></span>
-        </Menu.Item>
+            <a onClick={this.logout.bind(this)}><Icon type="user"/>退出</a>
+        </span>
         :
-        <Menu.Item  key="login" className="login li">
-            登录
-        </Menu.Item>;
+        <span className="login">
+            <a >注册</a> | <a onClick={this.loginClick.bind(this)}>登录</a>
+        </span>
+        ;
         return (
             <header className="header">
             <Row><Col span={24} className="logoRow">
@@ -124,20 +121,18 @@ class Header extends React.Component{
                 <Row>
                     <Col span={9}></Col>
 
-                    <Col span={15}>
+                    <Col span={9}>
                         <Menu className="lis" mode="horizontal" onClick={this.handleClick.bind(this)} selectedKeys={[this.state.current]}>
 
                             <Menu.Item key="home" className="li"><NavLink to="/home" activeStyle={{color: '#118eea'}}>首页</NavLink></Menu.Item>
-                            <Menu.Item key="jianjie"className="li spaceRight"><NavLink to="/service" activeStyle={{color: '#118eea'}}>医商云服务</NavLink></Menu.Item>
+                            <Menu.Item key="jianjie" className="li spaceRight"><NavLink to="/service" activeStyle={{color: '#118eea'}}>医商云服务</NavLink></Menu.Item>
                        
-                            <Menu.Item key="lianxi"className="li"><NavLink to="/cases" activeStyle={{color: '#118eea'}}>客户案例</NavLink></Menu.Item>
-                            <Menu.Item key="top"className="li"><NavLink to="/news" activeStyle={{color: '#118eea'}}>行业信息</NavLink></Menu.Item>
-                            <Menu.Item key="about"className="li spaceRight"><NavLink to="/about" activeStyle={{color: '#118eea'}}>关于我们</NavLink></Menu.Item>
-                      
-                            {userShow}
-                      
-
+                            <Menu.Item key="lianxi" className="li"><NavLink to="/cases" activeStyle={{color: '#118eea'}}>客户案例</NavLink></Menu.Item>
+                            <Menu.Item key="top" className="li"><NavLink to="/news" activeStyle={{color: '#118eea'}}>行业信息</NavLink></Menu.Item>
+                            <Menu.Item key="about" className="li"><NavLink to="/about" activeStyle={{color: '#118eea'}}>关于我们</NavLink></Menu.Item>
+                       
                         </Menu>
+                    </Col>
 <Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}
 onCancel={()=>this.setModalVisible(false)} footer={null} width={350}>
 
@@ -162,7 +157,7 @@ onCancel={()=>this.setModalVisible(false)} footer={null} width={350}>
         </Form>
 
 </Modal>
-                    </Col>
+                    <Col span={4}>{userShow}</Col>
                 </Row>
             </header>
         )

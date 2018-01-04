@@ -4,8 +4,9 @@ import Footer from './Footer'
 import News from './News'
 import Home from './Home'
 import Service from './Service'
-import Cases from './Cases'
 import About from './About'
+import Cases from './Cases'
+
 
 import {
     BrowserRouter as Router,
@@ -26,7 +27,6 @@ class PCIndex extends React.Component{
         }
     }
     render(){
-
         return (
             <Router history={hashHistory}>
             <div>
@@ -35,8 +35,9 @@ class PCIndex extends React.Component{
                         <Route  path="/home" component={Home}/>
                         <Route  path="/news" component={News}/>
                         <Route  path="/service" component={Service}/>
-                        <Route  path="/cases" component={Cases}/>            
-                        <Route  path="/about " component={About}/>            
+                        <Route  path="/about" component={About}/> 
+                        <Route  path="/cases" component={Cases}/>
+                                   
                 <Footer/>
             </div>
             </Router>

@@ -1,38 +1,54 @@
 import React, { Component } from 'react';
+import Slider from 'react-slick'
 
-import {
-    Row,
-    Col,
-    Tabs,
-    Carousel 
-} from 'antd'
+import {Carousel} from 'antd'
 
-function Home(){
+import NextArrow from './NextArrow'
+import PrevArrow from './PrevArrow'
+
+class Home extends Component{
+    constructor(props){
+        super(props)
+        this.state={
+            bigPics:[
+                './src/images/1.png',
+                './src/images/2.png',
+                './src/images/3.png'
+            ]
+        }
+    }
+    render(){
+    
     const settings={
+        // dots:true,
+        // dotsClass:'dotsClass',
+        // easing:'linear',
+        // speed:250
+
         dots:true,
-        easing:'linear',
-        speed:250
+        dotsClass:'dotsClass',
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        accessibility:true,
+        nextArrow:<NextArrow/>,
+        prevArrow:<PrevArrow/>
         
     }
   return(
-    <Row>
-        <Col span={6}></Col>
-        <Col span={16} className="footer">
-            <div>
-                <div className="carousel">
-                    <Carousel {...settings} autoplay>
-                        <div><img src="./src/images/1.png" /></div>
-                        <div><img src="./src/images/2.png" /></div>
-                        <div><img src="./src/images/3.png" /></div>
-                        <div><img src="./src/images/4.png" /></div>
-                    </Carousel>
-                </div>
-            </div>
-        </Col>
-
-        <Col span={2}></Col>
-    </Row>
+        <div className="carousel">
+            <Slider {...settings} autoplay>
+                {
+                    this.state.bigPics.map((item,index)=>{
+                        return (<img src={item} key={index}/>)
+                    })
+                }
+            </Slider>
+        </div>
   )
+}
 }
 
 export default Home;

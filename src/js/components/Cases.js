@@ -17,7 +17,7 @@ function Cases(){
 
     <Row>
       <Col span={6}></Col>
-      <Col span={16} className="footer">
+      <Col span={16}>
       <p style={{textAlign:'left'}}>
           这里是客户案例
       </p>

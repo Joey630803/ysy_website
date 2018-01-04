@@ -5,7 +5,7 @@ function Service(){
 
     <Row>
       <Col span={6}></Col>
-      <Col span={16} className="footer introduce">
+      <Col span={16}>
       <p>
         这里是服务
       </p>
