@@ -8,7 +8,8 @@ import {
 const TabPane=Tabs.TabPane
 import axios from 'axios'
 
-
+import MySlider from './MySlider'
+import ThreeTabs from './ThreeTabs'
 
 
 export default class News extends React.Component{
@@ -19,9 +20,22 @@ export default class News extends React.Component{
     }
     render(){
         return (
-            <div>
-                这里是行业信息
-            </div>
+    <div>
+      <MySlider/>
+      <ThreeTabs/>
+      <Row>
+        <Col span={6}></Col>
+        <Col span={16}>
+        <p>
+          这里是行业信息
+        </p>
+        
+
+        </Col>
+
+        <Col span={2}></Col>
+      </Row>
+    </div>
         )
     }
 }

@@ -32,18 +32,8 @@
     margin-top:6px;
 }
 
-.logo{
-    display:flex;
-    justify-content: center;
-    width:100px;
-}
 .logo img {
-    width:50px;
-    height:43px;
-}
-.logo span{
-    font-size:24px;
-    padding-left:5px;
+    width:30px;
 }
 
 .spaceRight{
@@ -54,9 +44,13 @@
 
 .carousel{
     width:100%;
-    height:350px;
+    height:450px;
     overflow: hidden;
     position:relative;
+}
+.carousel .banner{
+    width:100%;
+    height:450px;
 }
 
 .carousel .dotsClass{
@@ -89,24 +83,70 @@
     left:0;
     width:15px;
     height:15px;
-    font-size:35px;
+    font-size:15px; 
     content:'•';
-    
+    /* content:url(../images/home_icon_scroll_nor.png); */
     color:#000;
     opacity:.25;
 }
 .carousel .dotsClass li.slick-active button:before{
-    content:url(../images/slick_button.png);
+    content:url(../images/home_icon_scroll_sel.png);
+    width:15px;
+    height:15px;
     opacity:.75;
 }
 
 .gotoNext{
     position:absolute;
     display:block;
-    top:0px;
+    top:200px;
     right:100px;
-    width:50px;
-    height:50px;
+
+}
+.gotoPrev{
+    position:absolute;
+    display:block;
+    top:200px;
+    left:100px;
+    z-index:1
+}
+/* Home start */
+/* threeTabs start */
+
+.threeTabs{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* border:1px solid red; */
+}
+.threeTabs .threeTab{
+    background: #f5f6fa;
+
+    height:220px;
+    margin:2px;
+    padding:10px;
+    flex:1;
+    text-align: center;
+    min-width: 0;
+}
+.threeTabs .threeTab img,.threeTab h3,.threeTab p{
+    flex:1;
+
+}
+.threeTabs .threeTab img{
+    width:55px;
+    margin-top:25px;
+}
+.threeTabs .threeTab p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-break:break-all;
+    height:100px;
+    padding:10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    text-align:center;
 }
 
 
@@ -127,6 +167,7 @@
 .footerCenter{
     display: flex;
     align-items: center;
+
 }
 .footerCenter div{
     text-align: center;
@@ -135,16 +176,15 @@
 }
 .footerCenter div:nth-child(1){
     text-align:right;
-    flex:1;
+
 
 }
 .footerCenter div:nth-child(3){
     text-align:left;
-    flex:1;
+
 
 }
 .footerCenter img {
-    width:50px;
-    height:43px;
+    width:30px;
     margin:20px;
 }

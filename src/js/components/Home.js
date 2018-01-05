@@ -1,52 +1,39 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick'
-
-import {Carousel} from 'antd'
-
-import NextArrow from './NextArrow'
-import PrevArrow from './PrevArrow'
+import MySlider from './MySlider'
+import ThreeTabs from './ThreeTabs'
+//import '../mock/mockdata'
+import {
+    Row,
+    Col,
+    Tabs,
+    Carousel 
+} from 'antd'
 
 class Home extends Component{
     constructor(props){
         super(props)
         this.state={
-            bigPics:[
-                './src/images/1.png',
-                './src/images/2.png',
-                './src/images/3.png'
-            ]
+            Tabs: [],
         }
     }
-    render(){
-    
-    const settings={
-        // dots:true,
-        // dotsClass:'dotsClass',
-        // easing:'linear',
-        // speed:250
-
-        dots:true,
-        dotsClass:'dotsClass',
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-
-        accessibility:true,
-        nextArrow:<NextArrow/>,
-        prevArrow:<PrevArrow/>
-        
-    }
+render(){
   return(
-        <div className="carousel">
-            <Slider {...settings} autoplay>
-                {
-                    this.state.bigPics.map((item,index)=>{
-                        return (<img src={item} key={index}/>)
-                    })
-                }
-            </Slider>
-        </div>
+    <div>
+      <MySlider/>
+      <ThreeTabs/>
+
+      <Row>
+        <Col span={6}></Col>
+        <Col span={16}>
+        <p>
+          这里是home
+        </p>
+        </Col>
+
+        <Col span={2}></Col>
+      </Row>
+    </div>
   )
 }
 }

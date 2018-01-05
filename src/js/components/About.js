@@ -12,25 +12,27 @@ import {
   message
   
 } from 'antd'
-
+import MySlider from './MySlider'
 class About extends Component{
 
   render(){
+    return(
+      <div>
+        <MySlider/>
+        <Row>
+          <Col span={6}></Col>
+          <Col span={16}>
+          <p>
+            这里是关于我们
+          </p>
+          
 
-  
-  return(
+          </Col>
 
-    <Row>
-      <Col span={6}></Col>
-      <Col span={16}>
-        <p style={{textAlign:'left'}}>
-            这里是about
-        </p>
-      </Col>
-
-      <Col span={2}></Col>
-    </Row>
-  )
+          <Col span={2}></Col>
+        </Row>
+      </div>
+    )
 }
 }
 

@@ -12,19 +12,21 @@ import {
   message
   
 } from 'antd'
+import MySlider from './MySlider'
 function Cases(){
   return(
-
-    <Row>
-      <Col span={6}></Col>
-      <Col span={16}>
-      <p style={{textAlign:'left'}}>
+    <div>
+      <MySlider/>
+      <Row>
+        <Col span={6}></Col>
+        <Col span={16}>
+        <p>
           这里是客户案例
-      </p>
-      </Col>
-
-      <Col span={2}></Col>
-    </Row>
+        </p>
+        </Col>
+        <Col span={2}></Col>
+      </Row>
+    </div>
   )
 }
 
