@@ -22,7 +22,13 @@ export default class News extends React.Component{
         return (
     <div>
       <MySlider/>
-      <ThreeTabs/>
+      <Row className="NewsThreeTabs">
+        <Col span={5}></Col>
+        <Col span={14}>
+        <ThreeTabs/>
+      </Col>
+        <Col span={5}></Col>
+      </Row>
       <Row>
         <Col span={6}></Col>
         <Col span={16}>

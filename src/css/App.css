@@ -44,13 +44,13 @@
 
 .carousel{
     width:100%;
-    height:450px;
+    height:550px;
     overflow: hidden;
     position:relative;
 }
 .carousel .banner{
     width:100%;
-    height:450px;
+    height:550px;
 }
 
 .carousel .dotsClass{
@@ -99,18 +99,69 @@
 .gotoNext{
     position:absolute;
     display:block;
-    top:200px;
-    right:100px;
+    top:calc(45%);
+    right:250px;
 
 }
+.gotoNext img,.gotoPrev img{
+    vertical-align: middle;
+}
 .gotoPrev{
+
     position:absolute;
     display:block;
-    top:200px;
-    left:100px;
+    top:calc(45%);
+    left:250px;
     z-index:1
 }
 /* Home start */
+.HomeWrap .carousel .dotsClass{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    bottom:70px;
+    display: inline-block;
+}
+.HomeThreeTabs{
+    margin-top:-70px;
+}
+.shade{
+    height:6rem;
+    overflow: hidden;
+    background:#c2c9cf;
+    margin-top:20px;
+}
+.shade .shade_middle{
+    position:relative;
+}
+.shade .shade_middle img{
+    width:100%;
+    height:100%;
+}
+.shade .shade_middle .shade_tabs{
+    cursor: pointer;
+    width:200px;
+    height:35px;
+    position:absolute;
+    top:2.3rem;
+    right:8rem;
+    border:1px solid white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.shade .shade_middle .shade_tabs div{
+    flex:1;
+    height:100%;
+    line-height:35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size:14px;
+}
+/* News start */
+.NewsThreeTabs{
+    margin-top:10px;
+}
 /* threeTabs start */
 
 .threeTabs{
@@ -122,22 +173,48 @@
 .threeTabs .threeTab{
     background: #f5f6fa;
 
-    height:220px;
+    height:230px;
     margin:2px;
     padding:10px;
     flex:1;
     text-align: center;
     min-width: 0;
 }
-.threeTabs .threeTab img,.threeTab h3,.threeTab p{
+.threeTabs .threeTabActive{
+    background: #118eea;
+    height:230px;
+    margin:2px;
+    padding:10px;
     flex:1;
-
+    text-align: center;
+    min-width: 0;
 }
+
 .threeTabs .threeTab img{
     width:55px;
-    margin-top:25px;
+    margin-top:30px;
+}
+.threeTabs .threeTabActive img{
+    width:55px;
+    margin-top:30px;
+}
+.threeTabs .threeTabActive h3{
+    color:white;
 }
 .threeTabs .threeTab p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-break:break-all;
+    height:100px;
+    padding:10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    text-align:center;
+}
+
+.threeTabs .threeTabActive p{
+    color:white;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
