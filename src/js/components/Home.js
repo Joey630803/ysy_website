@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Slider from 'react-slick'
 import MySlider from './MySlider'
 import ThreeTabs from './ThreeTabs'
+import Underline from './Underline'
+import HomeFourBlocks from './HomeFourBlocks'
+import HomePic from './HomePic'
+
 //import '../mock/mockdata'
 import {
     Row,
@@ -17,8 +21,14 @@ class Home extends Component{
             Tabs: ['普华信联','医商云'],
             // defaultActiveKey:1,
             Actived:[false,true],
-        }
+            // MyText:(function(){
+            //   return(
+            //     <p>医商云</p>
+            //   )
+            // })()
+            MyText:<span>医商云</span>
     }
+  }
     twoTabsClick(key){
       const Actived=this.state.Actived
       for(let i=0;i<=1;i++){
@@ -69,6 +79,40 @@ render(){
         </Col>
         <Col span={3}></Col>
       </Row>
+      <Row className="">
+        <Col span={3}></Col>
+        <Col span={18} className="">
+            <Underline MyText={this.state.MyText}/>
+            <div className="ServiceIntroduce">
+            <p>基于云计算架构的综合服务性平台，为医院、供货商、物流商提供一站式解决方案<br/>
+            我们能为您做的：<br/>
+            资质管理、统计分析、准入管理、溯源管理、科室申请、结算管理、库房管理、产品信息库、采购管理、验收管<br/>
+            </p>
+      </div>
+        </Col>
+        <Col span={3}></Col>
+      </Row>
+      <Row className="">
+        <Col span={3}></Col>
+        <Col span={18} className="">
+            <HomeFourBlocks/>
+        </Col>
+        <Col span={3}></Col>
+      </Row>
+      <Row className="">
+        <Col span={3}></Col>
+        <Col span={18} className="">
+            <HomePic/>
+        </Col>
+        <Col span={3}></Col>
+      </Row>
+
+      <div className="ServiceIntroduce" style={{borderTop:'1px solid #ccc'}}>
+            <p>医商云<br/>
+            我们能为您做的：<br/>
+            资质管理、统计分析、准入管理、溯源管理、科室申请、结算管理、库房管理、产品信息库、采购管理、验收管<br/>
+            </p>
+      </div>
     </div>
   )
 }

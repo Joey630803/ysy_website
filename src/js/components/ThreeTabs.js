@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick'
+import React, { Component } from 'react'
 
 class ThreeTabs extends Component{
     constructor(props){

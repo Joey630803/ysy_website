@@ -44,13 +44,12 @@
 
 .carousel{
     width:100%;
-    height:550px;
+    height:400px;
     overflow: hidden;
     position:relative;
 }
 .carousel .banner{
     width:100%;
-    height:550px;
 }
 
 .carousel .dotsClass{
@@ -140,8 +139,8 @@
 }
 .shade .shade_middle .shade_tabs{
     cursor: pointer;
-    width:200px;
-    height:35px;
+    width:250px;
+    height:30px;
     position:absolute;
     top:2.3rem;
     right:8rem;
@@ -153,15 +152,250 @@
 .shade .shade_middle .shade_tabs div{
     flex:1;
     height:100%;
-    line-height:35px;
+    line-height:30px;
     text-align: center;
     vertical-align: middle;
     font-size:14px;
+}
+.Underline{
+    height:3rem;
+    margin: .5rem 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.Underline span{
+    font-size: 1rem;
+    display: inline-block;
+    height:3rem;
+    line-height:3rem;
+    margin:0 auto;
+    text-align: center;
+    border-bottom: 2px solid #118eea;
+}
+.HomeFourBlocks{
+    height:4rem;
+    display: flex;
+    margin-bottom: .5rem;
+}
+.HomeFourBlocks .FB{
+    background:#f5f6fa;
+    border-radius: .3rem;
+    flex:1;
+    height:4rem;
+    line-height: 4rem;
+    
+    margin-right:0.3rem;
+
+}
+.HomeFourBlocks .FB .FBcontent{
+    width:8.5rem;
+    margin:0 auto;
+}
+.HomeFourBlocks .FB .FBcontent:after{
+    display: block;
+    content:'';
+    clear: both
+}
+
+.HomeFourBlocks .FB .FBcontent div{
+    float: left;
+    display:table-cell;
+
+}
+.HomeFourBlocks .FB img{
+    width:2rem;
+    vertical-align:middle;
+
+}
+.HomeFourBlocks .FB:last-child{
+    flex:1;
+    margin-right:0;
+}
+.HomeFourBlocks .FB h1{
+
+    float: right;
+    font-family: Microsoft Yahei;
+    font-size:1.2rem;
+    color:#118eea;
+}
+.HomePics{
+    display: flex;
+    flex-flow:wrap;
+
+}
+.HomePics .HomePic{
+    position: relative;
+
+}
+.HomePics .HomePic img{
+    width:23.5rem;
+    margin-top:.1rem;
+
+}
+.HomePics .HomePic:nth-of-type(odd){ margin-right:.3rem;}
+
+.Pic_discript{
+    position:absolute;
+    width:92%;
+    bottom: 3rem;
+    left:1rem;
+    line-height: 2rem;  
+}
+.Pic_discript h2{
+    color:#118eea;
+}
+.Pic_discript p{
+    line-height: 1rem;
+    margin-top:.5rem;
+}
+.Pic_discript hr{
+    width:3rem;
+    height:3px;
+    border:none;
+    border-top:3px solid #118eea;
+}
+/* 医商云服务开始 */
+.Services{
+    display: flex;
+}
+
+.ServiceText div{
+    margin-top:.5rem;
+}
+.ServiceImg{
+    margin-left:2rem;
+}
+.ServiceImg img{
+    width:14rem;
+}
+
+.ServiceIntroduce{
+    text-align:center;
+    padding:1.5rem 0;
+    margin-top:1rem;
+}
+.ServiceIntroduce p{
+    line-height: 1rem;
+}
+.ServiceFooterImg{
+    text-align: center;
+    padding:1.5rem 0;
+    border-top: 1px solid #ccc;
 }
 /* News start */
 .NewsThreeTabs{
     margin-top:10px;
 }
+.NewsFourBlocks{
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+.NewsFourBlocks .NFB{
+    display: flex;
+    flex-flow:column;
+    padding:1.5rem;
+    align-items: center;
+    flex:1;
+    background:#f5f6fa;
+    margin-right:.3rem;
+}
+.NewsFourBlocks .NFB div{
+    padding:1rem;
+}
+.NewsFourBlocks .NFB img{
+    width:4rem;
+}
+.NewsFourBlocks .NFB hr{
+    width:1rem;
+    height:2px;
+    border:none;
+    border-top:2px solid #118eea;
+}
+.NFB h3,.NFB p,.NFB hr{
+    margin-bottom: 1rem;
+}
+.NFB h3{
+    margin-bottom: .5rem;
+}
+.NewsFourBlocks .NFB:last-child{
+    margin-right:0;
+}
+/* case start */
+.CaseThreeBlocks{
+    display:flex;
+}
+.CaseThreeBlocks .CFB{
+    padding:2rem 2rem 3rem;
+    background:#f5f6fa;
+    margin-right:.5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center
+}
+.CaseThreeBlocks div div{
+    height:12rem;
+    line-height: 12rem;
+    margin-bottom: 2rem;
+}
+
+.CFBActive{
+    padding:2rem 2rem 3rem;
+    margin-right:.5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    background:#118eea;
+    color:white;
+}
+.CaseThreeBlocks  h2{
+    margin-bottom: .5rem;
+}
+.CaseThreeBlocks .CFBActive h2{
+    margin-bottom: .5rem;
+    color:white;
+}
+.CaseThreeBlocks  img{
+    width:12rem;
+}
+.CaseThreeBlocks .CFB:last-child{
+    margin-right:0;
+}
+
+/* about start */
+.AboutfiveBlocks{
+    display: flex;
+    border-bottom:1px solid #ccc;
+    padding:2rem;
+    align-items: center;
+}
+.AboutfiveBlock{
+    display: flex;
+    flex-flow: column;
+    flex:1;
+    align-items: center;
+}
+.AboutfiveBlock div{
+    display: flex;
+
+    width:4rem;
+    height:4rem;
+    border:1px solid #ccc;
+    border-radius:4rem;
+    margin:auto auto;
+    
+
+}
+.AboutfiveBlock div img{
+    margin:auto auto;
+}
+.AboutfiveBlock p{
+    margin-top:.5rem;
+}
+
+
 /* threeTabs start */
 
 .threeTabs{
