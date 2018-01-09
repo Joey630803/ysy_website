@@ -31,7 +31,23 @@ class NewsFourBlocks extends Component{
             ]
         }
     }
-
+    componentWillMount(){
+        const texts=this.state.FourBlocks.map((i,index)=>i.text)
+        // console.log(texts[0])
+        //let _this=this
+        texts.forEach(j=>{
+            let newText
+            if(j.length > 47){
+                newText = j.substring(0,47)+"..."; 
+                this.state.FourBlocks.map((i,index)=>{
+                    i.text=newText
+                    // i.text.forEach(k=>k.setText(newText))
+                })
+            }
+        })
+        const FourBlocks=this.state.FourBlocks
+        this.setState({FourBlocks})
+    }
 render(){
   return(
         <div className="NewsFourBlocks">
