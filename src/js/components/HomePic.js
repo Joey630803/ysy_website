@@ -64,7 +64,9 @@ class HomePic extends Component{
     }
 
 render(){
-
+const imgOpacity={
+    opacity:'0.5'
+}
   return(
         <ul className="HomePics">
                 {
@@ -82,7 +84,7 @@ render(){
                             onMouseOver={this.Over.bind(this,index)}
                             onMouseLeave={this.Out.bind(this,index)}
                             >
-                            <img src={Pic.imgSrc}/>
+                            <img src={Pic.imgSrc} style={this.state.Hover[index]?imgOpacity:null}/>
                                 {Picdiscript}
                             </li>
                         )

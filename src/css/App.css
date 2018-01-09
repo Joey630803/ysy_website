@@ -380,22 +380,44 @@
 .AboutfiveBlock div{
     display: flex;
 
-    width:4rem;
-    height:4rem;
+    width:5rem;
+    height:5rem;
     border:1px solid #ccc;
-    border-radius:4rem;
+    border-radius:5rem;
     margin:auto auto;
     
 
 }
 .AboutfiveBlock div img{
+    height:1.8rem;
     margin:auto auto;
 }
 .AboutfiveBlock p{
     margin-top:.5rem;
 }
-
-
+.About {
+    margin-top:.5rem;
+    height:21.2rem;
+}
+.About img{
+    height:100%;
+    display: inline-block
+}
+.About img:first-child{
+    float:left;
+}
+.About img:last-child{
+    float:right;
+}
+.Abouttext{
+    padding:0 2rem;
+    text-align: center;
+    margin:1rem 0;
+}
+.Abouttext p{
+    margin-top:1rem;
+    line-height: 1rem;
+}
 /* threeTabs start */
 
 .threeTabs{
